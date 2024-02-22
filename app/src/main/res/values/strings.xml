@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Flash Light</string>
-    <string name="flashlight">F\nL\nA\nS\nH\nL\nI\nG\nH\nT</string>
+    <string name="flashlight_n">F\nL\nA\nS\nH\nL\nI\nG\nH\nT</string>
+    <string name="error">Có lỗi xảy ra</string>
 </resources>

@@ -17,7 +17,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/ic_light"
-        app:layout_constraintDimensionRatio="720:313"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -29,16 +30,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivLight">
+        app:layout_constraintTop_toBottomOf="@id/guideline">
 
         <TextView
-            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10dp"
             android:fontFamily="@font/roboto_black"
             android:gravity="center"
-            android:text="@string/flashlight"
+            android:text="@string/flashlight_n"
             android:textColor="#1AFFFFFF"
             android:textSize="@dimen/_20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -55,20 +55,20 @@
         <ImageView
             android:id="@+id/ivSos"
             android:layout_width="0dp"
-            android:layout_height="@dimen/_55dp"
-            android:src="@drawable/ic_bt_sos_on"
-            app:layout_constraintBottom_toBottomOf="@+id/guideline"
+            android:layout_height="@dimen/_50dp"
+            android:src="@drawable/ic_sos_off"
+            app:layout_constraintBottom_toBottomOf="@+id/guideline1"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/guideline1"
             tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/ivPower"
             android:layout_width="@dimen/_55dp"
             android:layout_height="0dp"
-            android:src="@drawable/ic_bt_power_on"
+            android:src="@drawable/ic_power_off"
             app:layout_constraintBottom_toBottomOf="@+id/guideline2"
             app:layout_constraintDimensionRatio="1:2"
             app:layout_constraintEnd_toEndOf="parent"
@@ -80,7 +80,7 @@
             android:id="@+id/ivBlink"
             android:layout_width="0dp"
             android:layout_height="@dimen/_55dp"
-            android:src="@drawable/ic_bt_blink_on"
+            android:src="@drawable/ic_blink_off"
             app:layout_constraintBottom_toBottomOf="@+id/guideline3"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="parent"
@@ -89,10 +89,12 @@
             tools:ignore="ContentDescription" />
 
         <FrameLayout
+            android:id="@+id/vSeekBar"
             android:layout_width="@dimen/_20dp"
             android:layout_height="match_parent"
             android:layout_marginVertical="@dimen/_55dp"
             android:layout_marginEnd="@dimen/_20dp"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent">
 
             <SeekBar
@@ -106,7 +108,7 @@
         </FrameLayout>
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline"
+            android:id="@+id/guideline1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -127,5 +129,12 @@
             app:layout_constraintGuide_percent="0.8" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
