@@ -7,7 +7,6 @@
     tools:context=".MainActivity">
 
     <View
-        android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bg_app" />
@@ -46,26 +45,14 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/ivLamp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:scaleType="fitXY"
             android:src="@drawable/ic_lamp"
             tools:ignore="ContentDescription" />
 
         <ImageView
-            android:id="@+id/ivSos"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/_50dp"
-            android:src="@drawable/ic_sos_off"
-            app:layout_constraintBottom_toBottomOf="@+id/guideline1"
-            app:layout_constraintDimensionRatio="1:1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline1"
-            tools:ignore="ContentDescription" />
-
-        <ImageView
-            android:id="@+id/ivPower"
+            android:id="@+id/ivTurnFlash"
             android:layout_width="@dimen/_55dp"
             android:layout_height="0dp"
             android:src="@drawable/ic_power_off"
@@ -77,10 +64,10 @@
             tools:ignore="ContentDescription" />
 
         <ImageView
-            android:id="@+id/ivBlink"
+            android:id="@+id/ivSos"
             android:layout_width="0dp"
             android:layout_height="@dimen/_55dp"
-            android:src="@drawable/ic_blink_off"
+            android:src="@drawable/ic_sos_off"
             app:layout_constraintBottom_toBottomOf="@+id/guideline3"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="parent"
@@ -108,18 +95,11 @@
         </FrameLayout>
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.245" />
-
-        <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.62" />
+            app:layout_constraintGuide_percent="0.6" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline3"

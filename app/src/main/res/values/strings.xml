@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Flash Light</string>
     <string name="flashlight_n">F\nL\nA\nS\nH\nL\nI\nG\nH\nT</string>
-    <string name="error">Có lỗi xảy ra</string>
+    <string name="no_flash_available">Không có sẵn đèn flash trên thiết bị của bạn</string>
 </resources>
