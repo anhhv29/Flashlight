@@ -15,6 +15,7 @@
         android:id="@+id/ivLight"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:scaleType="fitXY"
         android:src="@drawable/ic_light"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/guideline"
