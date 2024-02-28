@@ -106,34 +106,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun flashLightControl() {
-        binding.apply {
-            if (torchState) {
-                cameraManager.setTorchMode(cameraId, true)
-                ivLight.visibility = View.VISIBLE
-                ivTurnFlash.setImageDrawable(
-                    ContextCompat.getDrawable(
-                        this@MainActivity, R.drawable.ic_power_on
-                    )
-                )
-            }
-        }
-    }
-
-    private fun sosControl() {
-        binding.apply {
-            if (sosState) {
-                cycleCount = 0
-                ivSos.setImageDrawable(
-                    ContextCompat.getDrawable(
-                        this@MainActivity, R.drawable.ic_sos_on
-                    )
-                )
-                ivSos.postDelayed(blinkRunnable, blinkDuration.toLong())
-            }
-        }
-    }
-
     private fun stopAll() {
         binding.apply {
             isBlink = false
